@@ -16,6 +16,12 @@ h1{
 	left: -10000px;
 	height: 0;
 }
+.none{
+	display: none !important;
+}
+.block{
+	display: block !important;
+}
 .hero-unit{
 	background-image: url('http://traffic.ottawa.ca/map/camera?id=189&timems=1376689048102');
 	background-size: 100% auto;
@@ -199,5 +205,8 @@ h1{
 		text-transform: uppercase;
 		font-size: 1.4em;
 		letter-spacing: 5px;
+	}
+	.height-fix-300{
+		height: 300px;
 	}
 }
