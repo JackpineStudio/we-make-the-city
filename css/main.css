@@ -31,7 +31,7 @@ hr{
 	display: block;
 	width: 22px;
 	height: 3px;
-	background-color: yellow;
+	background-color: rgba(26,89,171,1);
 	-webkit-border-radius: 1px;
 	-moz-border-radius: 1px;
 	border-radius: 1px;

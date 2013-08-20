@@ -179,6 +179,26 @@
                 </div>
             </div>
             <div class="row">
+                <div class="span2">
+                    <a href="img/posters/Don't_Turn_Your_Back.pdf" target="_blank">
+                        <img src="img/posters/Don't_Turn_Your_Back.jpg" alt=""/>
+                        <p>Don't Turn Your Back</p>
+                    </a>
+                </div>
+                <div class="span2">
+                </div>
+                <div class="span2">
+                </div>
+                <div class="span2">
+                </div>
+                <div class="span2">
+                </div>
+                <div class="span2">
+                </div>
+                <div class="span2">
+                </div>         
+            </div>
+            <div class="row">
                 <div class="span12" id="posters">
                     <hr><hr><hr><hr>
                     <h2>Partners</h2>
@@ -212,23 +232,33 @@
 
         <script src="js/main.js"></script>
         <script>
-        // var lastScrollTop = 0;
-        // $(window).scroll(function(event){
-        //     var st = $(this).scrollTop();
-        //     if (st > lastScrollTop){
-        //         // dowscroll code
-        //     } else {
-        //         // upscroll code
-        //     }
-        //     lastScrollTop = st;
-        // });
+        var lastScrollTop = 0;
+        $(window).scroll(function(event){
+            var st = $(this).scrollTop();
+            if (st > lastScrollTop){
+                // dowscroll code
+                $(window).scroll(function(){
+                    $('.hero-unit').fadeOut(1000, function(){
+                        $('.hero-unit-scroll').css({'display':'block'})
+                    });
+                });  
+            } else {
+                // upscroll code
+                $(window).scroll(function(){
+                    $('.hero-unit-scroll').fadeOut(1000, function(){
+                        $('.hero-unit').fadeIn(1000)
+                    });
+                });  
+            }
+            lastScrollTop = st;
+        });
 
-        $(window).scroll(function(){
-            $('.hero-unit').fadeOut(1000, function(){
-                $('.hero-unit-scroll').css({'display':'block'})
-            });
-        });  
 
+        // $(window).scroll(function(){
+        //     $('.hero-unit').fadeOut(1000, function(){
+        //         $('.hero-unit-scroll').css({'display':'block'})
+        //     });
+        // });  
         // $(window).scroll(function(){
         //     $('.hero-unit').css({'display':'none'}, function(){
         //         $('.hero-unit-scroll').css({'display':'block'});
