@@ -40,21 +40,21 @@
         <![endif]-->
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
         <script type="text/JavaScript">
-   var time = new Date().getTime();
-   function refresh() {
-    window.location.reload(new Date().getTime() - time >= 500);
-   }
-   var cookiec = document.cookie;
-   if (cookiec != ""){
-    if (cookiec < 2){
-     document.cookie = 2;
-     setTimeout(refresh, 500);     
-    }
-   } else {
-    document.cookie = 1;
-    setTimeout(refresh, 500);
-   }
-  </script>
+            var time = new Date().getTime();
+            function refresh() {
+                window.location.reload(new Date().getTime() - time >= 500);
+            }
+            var cookiec = document.cookie;
+            if (cookiec != ""){
+                if (cookiec < 2){
+                    document.cookie = 2;
+                    setTimeout(refresh, 500);     
+                }
+            } else {
+                document.cookie = 1;
+                setTimeout(refresh, 500);
+            }
+        </script>
         <div class="container">
             <!-- Main hero unit for a primary marketing message or call to action -->
             <div class="hero-unit">
@@ -207,12 +207,12 @@
                     var names = ["Artengine 01", "Caleb Abbot", "Don't Turn Your Back", "Harry Welsh", "Jessie FyfeLoose", "Mana Rouholamini", "Mike Knauer", 
                                 "OAG Summer Camp 01", "OAG Summer Camp 02", "OAG Summer Camp 03", "OAG Summer Camp 04", "Remi Ryan 01", "Remi Ryan 02", "Ryan Stec 01", 
                                 "Ryan Stec 02", "Simon Guibord", "Vance Fok", "Veronica Consales", "Veronique Couillard", "We Make The City 01", "We Make The City 02", 
-                                "We Make The City 03", "We Make the City Posters3", "Yow Lab 01", "Yow Lab 02", "Yow Lab 03", "Yow Lab 04"]; 
+                                "We Make The City 03", "We Make the City", "Yow Lab 01", "Yow Lab 02", "Yow Lab 03", "Yow Lab 04"]; 
                     for (var i = 0; i < pdfNames.length; i++) {
                         var pdfName = pdfNames[i];
                         var imgLine = '<img src="img/posters/' + pdfName + '.jpg" alt=""/>';
                         var jpgName = "";
-                        var div = '<div class="span2"> <a href="img/' + pdfName  + '.pdf '+ '" target="_blank">' + imgLine + '<p>' + names[i] + '</p> </a></div>';
+                        var div = '<div class="span2 posters"> <a href="img/posters/' + pdfName  + '.pdf '+ '" target="_blank">' + imgLine + '<p>' + names[i] + '</p> </a></div>';
                         document.write(div);
                     }
                 </script>      
@@ -224,7 +224,7 @@
                 </div>
             </div>
             <div class="row" id="partners">
-                <div class="span3">
+                <div class="span2">
                     <a href=""><img src="img/partner-artengine.png" alt=""></a>
                 </div>
                 <div class="span3">
@@ -233,8 +233,11 @@
                 <div class="span3">
                     <img src="img/partner-ontario-arts-council.png" alt="">
                 </div>
-                <div class="span3">
+                <div class="span2">
                     <img src="img/partner-ottawa.png" alt="">
+                </div>
+                <div class="span2">
+                    <img src="img/partner-jackpine.png" alt="">
                 </div>
             </div> 
             <hr>

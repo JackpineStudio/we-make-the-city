@@ -19,7 +19,9 @@ h1{
 hr{
 	border: 4px solid transparent;
 }
-
+.posters a:hover{
+	opacity: .7;
+}
 
 .none{
 	display: none !important;
