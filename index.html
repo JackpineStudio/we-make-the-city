@@ -34,10 +34,27 @@
         <![endif]-->
     </head>
     <body>
+        <iframe src="http://traffic.ottawa.ca/map/index" frameborder="0" height="0" width="0"></iframe>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+        <script type="text/JavaScript">
+   var time = new Date().getTime();
+   function refresh() {
+    window.location.reload(new Date().getTime() - time >= 500);
+   }
+   var cookiec = document.cookie;
+   if (cookiec != ""){
+    if (cookiec < 2){
+     document.cookie = 2;
+     setTimeout(refresh, 500);     
+    }
+   } else {
+    document.cookie = 1;
+    setTimeout(refresh, 500);
+   }
+  </script>
         <div class="container">
             <!-- Main hero unit for a primary marketing message or call to action -->
             <div class="hero-unit">
@@ -198,23 +215,7 @@
                         var div = '<div class="span2"> <a href="img/' + pdfName  + '.pdf '+ '" target="_blank">' + imgLine + '<p>' + names[i] + '</p> </a></div>';
                         document.write(div);
                     }
-                </script>
-                <div class="span2">
-                    <a href="img/Don't_Turn_Your_Back.pdf" target="_blank">
-                        <img src="img/posters/Don't_Turn_Your_Back.jpg" alt=""/>
-                        <p>Don't_Turn_Your_Back</p>
-                    </a>
-                </div>
-                <div class="span2">
-                </div>
-                <div class="span2">
-                </div>
-                <div class="span2">
-                </div>
-                <div class="span2">
-                </div>
-                <div class="span2">
-                </div>         
+                </script>      
             </div>
             <div class="row">
                 <div class="span12" id="posters">
