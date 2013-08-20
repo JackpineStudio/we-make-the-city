@@ -14,16 +14,22 @@
         <link rel="stylesheet" href="css/main.css">
         <link href='http://fonts.googleapis.com/css?family=Lekton:400,700,400italic' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
         <meta name="geo.region" content="CA-ON" />
         <meta name="geo.placename" content="Ottawa" />
         <meta name="geo.position" content="45.425435;-75.688791" />
         <meta name="ICBM" content="45.425435, -75.688791" />
-<style type="text/css">   
-
-
-
-</style>
+        <!--[if IE]>
+        <style type="text/css">
+            .hero-unit{
+                background-image: url('img/camera189.jpeg');
+                background-size: 100% auto;
+                background-color: blue;
+                z-index: 3;
+                -webkit-border-radius: 0 !important;
+                   -moz-border-radius: 0 !important;
+                        border-radius: 0 !important;
+            }        </style>
+        <![endif]-->
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -38,7 +44,7 @@
             <!-- Main hero unit for a primary marketing message or call to action -->
             <div class="hero-unit">
                 <div class="header-content">
-                    <p>PRESENTED BY <a href="http://www.artengine.ca/" target="_blank"><img src="img/artengine-logo.png" width="120" alt=""></a></p>
+                    <p>PRESENTED BY <a href="http://www.artengine.ca/" target="_blank"><img src="img/artengine-logo.png" width="120" style="width:120px !important;" alt=""></a></p>
                     <h1>We make the city! We are the city!</h1>
                     <img src="img/we-make-the-city-logo-animated.gif" alt="" class="logo">
                 </div>
@@ -63,10 +69,39 @@
                 </div>
                 <div class="blue-tint"></div>
             </div>
+            <div class="hero-unit-scroll">
+                <div class="header-content">
+                    <h1>We make the city! We are the city!</h1>
 
-            <!-- Example row of columns -->
+                </div>
+                <div class="navbar">
+                    <div class="navbar-inner navbar-fixed">
+                        <div class="container">
+                            <a href="index.html">
+                                <img src="img/we-make-the-city-logo-animated.gif" class="logo" alt="" />
+                            </a>
+                            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </a>
+                            <div class="nav-collapse collapse">
+                                <ul class="nav">
+                                    <li><a href="#events">Events</a></li>
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#posters">Posters</a></li>
+                                    <li><a href="#partners">Partners</a></li>
+                                </ul>
+                            </div><!--/.nav-collapse -->
+                        </div>
+                    </div>
+                </div>
+                <div class="blue-tint"></div>
+            </div>
+            <!-- Events -->
             <div class="row">
                 <div class="span12" id="events">
+                    <hr><hr><hr><hr>
                     <h2>Events</h2>
                 </div>
             </div>
@@ -116,6 +151,7 @@
             </div>
             <div class="row">
                 <div class="span12" id="about">
+                    <hr><hr><hr><hr>
                     <h2>How we make the city?</h2>
                 </div>
             </div>
@@ -131,6 +167,7 @@
             </div>
             <div class="row">
                 <div class="span12" id="posters">
+                    <hr><hr><hr><hr>
                     <h2>Design Challenge</h2>
                 </div>
             </div>
@@ -143,6 +180,7 @@
             </div>
             <div class="row">
                 <div class="span12" id="posters">
+                    <hr><hr><hr><hr>
                     <h2>Partners</h2>
                 </div>
             </div>
@@ -167,13 +205,36 @@
 
         </div> <!-- /container -->
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
 
         <script src="js/main.js"></script>
+        <script>
+        // var lastScrollTop = 0;
+        // $(window).scroll(function(event){
+        //     var st = $(this).scrollTop();
+        //     if (st > lastScrollTop){
+        //         // dowscroll code
+        //     } else {
+        //         // upscroll code
+        //     }
+        //     lastScrollTop = st;
+        // });
 
+        $(window).scroll(function(){
+            $('.hero-unit').fadeOut(1000, function(){
+                $('.hero-unit-scroll').css({'display':'block'})
+            });
+        });  
+
+        // $(window).scroll(function(){
+        //     $('.hero-unit').css({'display':'none'}, function(){
+        //         $('.hero-unit-scroll').css({'display':'block'});
+        //     });
+        // });  
+        </script>
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
