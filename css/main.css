@@ -243,6 +243,17 @@ hr{
 	color: #fff;
 	float: left;
 }
+.hero-unit-scroll .blue-tint{
+	background-color: rgba(26,89,171,.9);
+}
+.navbar .nav > li > a {
+	color: white;
+	float: none;
+	padding: 10px 15px;
+	text-decoration: none;
+	text-shadow: 0 0px 0 #ffffff;
+	background-color: rgba(26,89,171,.9);
+}
 @media (min-width: 980px){
 	.hero-unit .navbar-inner {
 		text-transform: uppercase;
@@ -257,12 +268,23 @@ hr{
 	.hero-unit-scroll .blue-tint{
 		background-color: rgba(26,89,171,.9);
 	}
+	.navbar .nav > li > a {
+		color: white;
+		float: none;
+		padding: 10px 15px;
+		text-decoration: none;
+		text-shadow: 0 0px 0 #ffffff;
+		background-color: transparent;
+		height: auto;
+	}
 }
 @media (min-width:1200px){
 	.hero-unit .blue-tint{
 		height: 450px;
 	}
-
+	.hero-unit-scroll .blue-tint{
+		background-color: rgba(26,89,171,.9);
+	}
 	.hero-unit .logo{
 		padding: 50px 0;
 	}
