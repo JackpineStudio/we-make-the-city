@@ -14,6 +14,8 @@
         <link rel="stylesheet" href="css/main.css">
         <link href='http://fonts.googleapis.com/css?family=Lekton:400,700,400italic' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="js/handlebars.js"></script>
+
         <meta name="geo.region" content="CA-ON" />
         <meta name="geo.placename" content="Ottawa" />
         <meta name="geo.position" content="45.425435;-75.688791" />
@@ -35,11 +37,7 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
-
-
-
         <div class="container">
             <!-- Main hero unit for a primary marketing message or call to action -->
             <div class="hero-unit">
@@ -179,13 +177,18 @@
                 </div>
             </div>
             <div class="row">
+                
                 <div class="span2">
-                    <a href="img/posters/Don't_Turn_Your_Back.pdf" target="_blank">
-                        <img src="img/posters/Don't_Turn_Your_Back.jpg" alt=""/>
-                        <p>Don't Turn Your Back</p>
+                    <a href="img/{{name}}.pdf" target="_blank">
+                        <img src="img/posters/{{name}}.jpg" alt=""/>
+                        <p>{{name}}</p>
                     </a>
                 </div>
                 <div class="span2">
+                    <a href="img/Don't_Turn_Your_Back.pdf" target="_blank">
+                        <img src="img/posters/Don't_Turn_Your_Back.jpg" alt=""/>
+                        <p>Don't_Turn_Your_Back</p>
+                    </a>
                 </div>
                 <div class="span2">
                 </div>
@@ -224,47 +227,18 @@
             </footer>
 
         </div> <!-- /container -->
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script id="entry-template" type="text/x-handlebars-template">
+  {
+  people: [
+    {firstName: "Yehuda", lastName: "Katz"},
+    {firstName: "Carl", lastName: "Lerche"},
+    {firstName: "Alan", lastName: "Johnson"}
+  ]
+}
+</script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-
         <script src="js/vendor/bootstrap.min.js"></script>
-
         <script src="js/main.js"></script>
-        <script>
-        var lastScrollTop = 0;
-        $(window).scroll(function(event){
-            var st = $(this).scrollTop();
-            if (st > lastScrollTop){
-                // dowscroll code
-                $(window).scroll(function(){
-                    $('.hero-unit').fadeOut(1000, function(){
-                        $('.hero-unit-scroll').css({'display':'block'})
-                    });
-                });  
-            } else {
-                // upscroll code
-                $(window).scroll(function(){
-                    $('.hero-unit-scroll').fadeOut(1000, function(){
-                        $('.hero-unit').fadeIn(1000)
-                    });
-                });  
-            }
-            lastScrollTop = st;
-        });
-
-
-        // $(window).scroll(function(){
-        //     $('.hero-unit').fadeOut(1000, function(){
-        //         $('.hero-unit-scroll').css({'display':'block'})
-        //     });
-        // });  
-        // $(window).scroll(function(){
-        //     $('.hero-unit').css({'display':'none'}, function(){
-        //         $('.hero-unit-scroll').css({'display':'block'});
-        //     });
-        // });  
-        </script>
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
