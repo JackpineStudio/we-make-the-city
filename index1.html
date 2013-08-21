@@ -15,7 +15,6 @@
         <link href='http://fonts.googleapis.com/css?family=Lekton:400,700,400italic' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script src="js/handlebars.js"></script>
-
         <meta name="geo.region" content="CA-ON" />
         <meta name="geo.placename" content="Ottawa" />
         <meta name="geo.position" content="45.425435;-75.688791" />
@@ -34,30 +33,15 @@
         <![endif]-->
     </head>
     <body>
-        <iframe src="http://traffic.ottawa.ca/map/index" frameborder="0" height="0" width="0" style="margin: 0 !important; padding: 0 !important; display: none;"></iframe>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+		
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
-        <script type="text/JavaScript">
-            var time = new Date().getTime();
-            function refresh() {
-                window.location.reload(new Date().getTime() - time >= 500);
-            }
-            var cookiec = document.cookie;
-            if (cookiec != ""){
-                if (cookiec < 2){
-                    document.cookie = 2;
-                    setTimeout(refresh, 500);     
-                }
-            } else {
-                document.cookie = 1;
-                setTimeout(refresh, 500);
-            }
-        </script>
+		
         <div class="container">
             <!-- Main hero unit for a primary marketing message or call to action -->
-            <div class="hero-unit">
+            <div class="hero-unit" >
                 <div class="header-content">
                     <p>PRESENTED BY <a href="http://www.artengine.ca/" target="_blank"><img src="img/artengine-logo.png" width="120" style="width:120px !important;" alt=""></a></p>
                     <h1>We make the city! We are the city!</h1>
@@ -207,37 +191,34 @@
                     var names = ["Artengine 01", "Caleb Abbot", "Don't Turn Your Back", "Harry Welsh", "Jessie FyfeLoose", "Mana Rouholamini", "Mike Knauer", 
                                 "OAG Summer Camp 01", "OAG Summer Camp 02", "OAG Summer Camp 03", "OAG Summer Camp 04", "Remi Ryan 01", "Remi Ryan 02", "Ryan Stec 01", 
                                 "Ryan Stec 02", "Simon Guibord", "Vance Fok", "Veronica Consales", "Veronique Couillard", "We Make The City 01", "We Make The City 02", 
-                                "We Make The City 03", "We Make the City", "Yow Lab 01", "Yow Lab 02", "Yow Lab 03", "Yow Lab 04"]; 
+                                "We Make The City 03", "We Make the City Posters3", "Yow Lab 01", "Yow Lab 02", "Yow Lab 03", "Yow Lab 04"]; 
                     for (var i = 0; i < pdfNames.length; i++) {
                         var pdfName = pdfNames[i];
                         var imgLine = '<img src="img/posters/' + pdfName + '.jpg" alt=""/>';
                         var jpgName = "";
-                        var div = '<div class="span2 posters"> <a href="img/posters/' + pdfName  + '.pdf '+ '" target="_blank">' + imgLine + '<p>' + names[i] + '</p> </a></div>';
+                        var div = '<div class="span2"> <a href="img/' + pdfName  + '.pdf '+ '" target="_blank">' + imgLine + '<p>' + names[i] + '</p> </a></div>';
                         document.write(div);
                     }
                 </script>      
             </div>
             <div class="row">
-                <div class="span12" id="partners">
+                <div class="span12" id="posters">
                     <hr><hr><hr><hr>
                     <h2>Partners</h2>
                 </div>
             </div>
-            <div class="row partners" >
-                <div class="span2">
-                    <a href="http://www.artengine.ca/"><img src="img/partner-artengine.png" alt=""></a>
+            <div class="row" id="partners">
+                <div class="span3">
+                    <a href=""><img src="img/partner-artengine.png" alt=""></a>
                 </div>
                 <div class="span3">
-                    <a href="http://www.canadacouncil.ca/"><img src="img/partner-canada-council-for-the-arts.png" alt=""></a>
+                    <img src="img/partner-canada-council-for-the-arts.png" alt="">
                 </div>
                 <div class="span3">
-                    <a href="http://www.arts.on.ca/site4.aspx"><img src="img/partner-ontario-arts-council.png" alt=""></a>
+                    <img src="img/partner-ontario-arts-council.png" alt="">
                 </div>
-                <div class="span2">
-                    <a href="http://ottawa.ca/en"><img src="img/partner-ottawa.png" alt=""></a>
-                </div>
-                <div class="span2">
-                    <a href="http://www.jackpine.co/"><img src="img/partner-jackpine.png" alt=""></a>
+                <div class="span3">
+                    <img src="img/partner-ottawa.png" alt="">
                 </div>
             </div> 
             <hr>
