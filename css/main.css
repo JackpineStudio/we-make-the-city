@@ -22,7 +22,9 @@ hr{
 .posters a:hover{
 	opacity: .7;
 }
-
+.partners a:hover{
+	opacity: .7;
+}
 .none{
 	display: none !important;
 }
