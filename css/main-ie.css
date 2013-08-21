@@ -8,7 +8,7 @@ body {
 }
 
 *{
-	font-family: 'Lekton', 'Lucida Console', monospace;
+	font-family: 'Lucida Console', monospace;
 }
 
 h1{
@@ -111,7 +111,17 @@ hr{
     padding-left: 20px;
     padding-right: 20px;
 }
-
+.hero-unit .navbar-inner {
+  background-color: none; 
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+}
 .dropdown-menu {
     background-clip: padding-box;
     background-color: red;
@@ -199,12 +209,16 @@ hr{
 	width: 100%;
 	display: none;
 	height: 80px;
-	position: fixed;	
+	position: fixed;
+	top: 0;	
 	left: 0;
 	padding: 0;
  	margin-bottom: 0;
+ 	background-color: #1a59ab;
 }
-
+.hero-unit-scroll > *{
+	float: left;
+}
 .hero-unit-scroll .blue-tint{
 	height: 80px;
 }
@@ -232,10 +246,21 @@ hr{
     border: 0 solid #fff;
     border-radius: 0;
     box-shadow: none;
-    min-height: 40px;
-    
+    min-height: 40px;  
     padding: 20px;
 }
+.hero-unit-scroll .navbar-inner {
+  background-color: rgba(26,89,171,0.5); 
+  background-image: rgba(26,89,171,0.5);
+  background-image: rgba(26,89,171,0.5);
+  background-image: rgba(26,89,171,0.5);
+  background-image: rgba(26,89,171,0.5);
+  background-image: rgba(26,89,171,0.5);
+  background-image: rgba(26,89,171,0.5);
+  background-repeat: no-repeat;
+  filter: none;
+}
+
 .hero-unit-scroll .navbar{
 	margin: 0;
 	padding: 0;
@@ -277,7 +302,7 @@ hr{
 		padding: 10px 15px;
 		text-decoration: none;
 		text-shadow: 0 0px 0 #ffffff;
-		background-color: transparent;
+		background-color: rgba(26,89,171,.9);
 		height: auto;
 	}
 }
