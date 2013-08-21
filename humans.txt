@@ -1,15 +1,17 @@
 # humanstxt.org/
-# The humans responsible & technology colophon
+# This website was developed by Jackpine for Artengine
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    artengine  @artengine
+    Jackpine   @jackpineco 
 
 # THANKS
 
-    <name>
+    Artengine
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
     jQuery, Modernizr
+    Bootstrap, Ottawa Traffic Cams
