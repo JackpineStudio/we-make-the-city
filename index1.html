@@ -11,7 +11,6 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="css/main.css">
         <link href='http://fonts.googleapis.com/css?family=Lekton:400,700,400italic' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script src="js/handlebars.js"></script>
@@ -20,31 +19,15 @@
         <meta name="geo.position" content="45.425435;-75.688791" />
         <meta name="ICBM" content="45.425435, -75.688791" />
         <!--[if IE]>
-        <style type="text/css">
-            .hero-unit{
-                background-image: url('img/camera189.jpeg');
-                background-size: 100% auto;
-                background-color: blue;
-                z-index: 3;
-                -webkit-border-radius: 0 !important;
-                   -moz-border-radius: 0 !important;
-                        border-radius: 0 !important;
-            }        
-        </style>
+        <link rel="stylesheet" type="text/css" href="css/main-ie.css">
         <![endif]-->
         <!--[if !IE]><!-->
-        <style>
-            .hero-unit{
-            background-image: url('http://traffic.ottawa.ca/map/camera?id=189&timems=1376689048102');
-            background-size: 100% auto;
-            background-color: blue;
-            z-index: 3;
-            -webkit-border-radius: 0 !important;
-               -moz-border-radius: 0 !important;
-                    border-radius: 0 !important;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
         <!--<![endif]-->
+
+        <style>
+
+        </style>
 
     </head>
     <body>
@@ -89,7 +72,7 @@
 
                 </div>
                 <div class="navbar">
-                    <div class="navbar-inner navbar-fixed">
+                    <div class="navbar-inner navbar-fixed navbar-inverse">
                         <div class="container">
                             <a href="index.html">
                                 <img src="img/we-make-the-city-logo-animated.gif" class="logo" alt="" />
