@@ -41,7 +41,44 @@
 			var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 			var isIE = /*@cc_on!@*/false; 
 			if (!isSafari && !isIE){
-				document.write("<style> .hero-unit { background: url('http://traffic.ottawa.ca/map/camera?id=189&amp;timems=1376689048102'); background-size: 100% auto;} </style>");
+				var camera = Math.floor(Math.random() * 12);
+				switch(camera) {
+					case 0:
+						document.write("<style> /* Albert & Lyon */ .hero-unit { background: url('http://traffic.ottawa.ca/map/camera?id=41&timems=1377200642324'); background-size: 100% auto;} </style>");
+						break;
+					case 1:
+						document.write("<style> /* Albert & O'Connor */ .hero-unit { background: url('http://traffic.ottawa.ca/map/camera?id=42&timems=1377200690797'); background-size: 100% auto;} </style>");
+						break;
+					case 2:
+						document.write("<style> /* Bank & Laurier */ .hero-unit { background: url('http://traffic.ottawa.ca/map/camera?id=123&timems=1377201064759'); background-size: 100% auto;} </style>");
+						break;
+					case 3:
+						document.write("<style> /* Bank & Somerset */ .hero-unit { background: url('http://traffic.ottawa.ca/map/camera?id=64&timems=1377201116467'); background-size: 100% auto;} </style>");
+						break;
+					case 4:
+						document.write("<style> /* Elgin & Queen */ .hero-unit { background: url('http://traffic.ottawa.ca/map/camera?id=34&timems=1377202218390'); background-size: 100% auto;} </style>");
+						break;
+					case 5:
+						document.write("<style> /* Bay & Laurier */ .hero-unit { background: url('http://traffic.ottawa.ca/map/camera?id=157&timems=1377201295291'); background-size: 100% auto;} </style>");
+						break;
+					case 6:
+						document.write("<style> /* Besserer & Waller */ .hero-unit { background: url('http://traffic.ottawa.ca/map/camera?id=184&timems=1377201427561'); background-size: 100% auto;} </style>");
+						break;
+					case 7:
+						document.write("<style> /* Bronson & Carling */ .hero-unit { background: url('http://traffic.ottawa.ca/map/camera?id=4&timems=1377201630725'); background-size: 100% auto;} </style>");
+						break;
+					case 8:
+						document.write("<style> /* Dalhousie & Murray */ .hero-unit { background: url('http://traffic.ottawa.ca/map/camera?id=185&timems=1377201919764'); background-size: 100% auto;} </style>");
+						break;
+					case 9:
+						document.write("<style> /* Dalhousie & Rideau */ .hero-unit { background: url('http://traffic.ottawa.ca/map/camera?id=107&timems=1377201975722'); background-size: 100% auto;} </style>");
+						break;
+					case 10:
+						document.write("<style> /* Kent & Slater */ .hero-unit { background: url('http://traffic.ottawa.ca/map/camera?id=46&timems=1377202500962'); background-size: 100% auto;} </style>");
+						break;
+					default:
+						document.write("<style> /* Bank & Fifth */ .hero-unit { background: url('http://traffic.ottawa.ca/map/camera?id=189&amp;timems=1376689048102'); background-size: 100% auto;} </style>");
+				}
 			}
 		</script>
 				
