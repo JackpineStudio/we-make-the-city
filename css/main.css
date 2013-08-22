@@ -44,8 +44,8 @@ hr{
 	box-shadow: none;
 }
 .hero-unit{
-	background-image: url('http://traffic.ottawa.ca/map/camera?id=189&amp;timems=1376689048102');
-	background-size: 100% auto;
+	background-image: url('../img/camera189.jpg');
+	background-size: auto;
 	background-color: blue;
 	z-index: 3;
 	-webkit-border-radius: 0 !important;
