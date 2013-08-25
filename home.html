@@ -44,7 +44,9 @@
         <!--[if !IE]><!-->
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <!--<![endif]-->
-		
+		<!--[if IE 6]>
+        <link href="css/ie6.min.css" rel="stylesheet">
+        <![endif]-->
 		<script type="text/JavaScript">
 			var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 			var isIE = /*@cc_on!@*/false; 
@@ -370,6 +372,9 @@
             g.src='//www.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
+        <script>
+    $(function(){if($.browser.msie&&parseInt($.browser.version,10)===6){$('.row div[class^="span"]:last-child').addClass("last-child");$('[class*="span"]').addClass("margin-left-20");$(':button[class="btn"], :reset[class="btn"], :submit[class="btn"], input[type="button"]').addClass("button-reset");$(":checkbox").addClass("input-checkbox");$('[class^="icon-"], [class*=" icon-"]').addClass("icon-sprite");$(".pagination li:first-child a").addClass("pagination-first-child")}})
+</script>
     </body>
 </html>
 
